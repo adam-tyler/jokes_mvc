@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Jokes MVC CRUD App</title>
+	</head>
+	<body>
+		<form action="/edit/{{joke.id}}" method="POST">
+			<div>
+				<label for="joke">Joke: </label>
+				<input type="text" name="joke" value="{{joke.joke}}"/>
+			</div>
+			<div>
+				<label for="punchline">Punchline: </label>
+				<input type="text" name="punchline" value="{{joke.punchline}}" />
+			</div>
+			<div>
+				<label for="rating">Rating: </label>
+				<input type="number" name="rating" value="{{joke.rating}}" min="1" max="10" />
+			</div>
+			<button type="submit" value="submit">Update</button>
+		</form>
+	</body>
+</html>
